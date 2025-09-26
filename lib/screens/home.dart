@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttercollapedrawer/Charts/MyLineChart.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -13,7 +14,15 @@ class HomePage extends StatelessWidget {
         title: Text("Dashboard"),
         elevation: 0.9,
       ),
-      body: const Center(child: Text('Welocme Dashboard')),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: AspectRatio(
+            aspectRatio: 1.70, // Adjust aspect ratio as needed
+            child: MyLineChart(),
+          ),
+        ),
+      ),
     );
   }
 }
