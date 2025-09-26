@@ -1,8 +1,6 @@
 // ignore_for_file: file_names
-
 import 'package:flutter/material.dart';
 import 'package:fluttercollapedrawer/NavigationBar/NavigationProvider.dart';
-
 import 'package:fluttercollapedrawer/data/DrawerData.dart';
 import 'package:fluttercollapedrawer/model/DrawerModel.dart';
 import 'package:fluttercollapedrawer/screens/home.dart';

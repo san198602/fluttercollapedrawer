@@ -4,6 +4,7 @@ import 'package:fluttercollapedrawer/NavigationBar/NavDrawer.dart';
 import 'package:fluttercollapedrawer/NavigationBar/NavigationProvider.dart';
 
 import 'package:provider/provider.dart';
+import 'package:fluttercollapedrawer/Constants/const.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -17,13 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) => ChangeNotifierProvider(
     create: (context) => Navigationprovider(),
-    child: MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.deepOrange),
-
-      home: const MyHomePage(),
-      title: title,
-    ),
+    child: MaterialApp(debugShowCheckedModeBanner: false, home: MyHomePage()),
   );
 }
 
