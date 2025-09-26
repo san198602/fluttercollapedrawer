@@ -37,8 +37,7 @@ dependencies:
   provider: ^6.1.5+1
   google_fonts: ^6.3.2
   page_transition: ^2.2.1
-  flutter_splash_screen: ^3.0.0
-  flutter_native_splash: ^2.4.6
+ 
   
 
 dev_dependencies:
@@ -52,11 +51,7 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
 
-flutter_native_splash:
-  image: assets/images/android.png
-  color: "#2A52BE"
-  android: true
-  ios: true
+
   
 flutter:
 
@@ -66,8 +61,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  assets:
-     - assets/images/android.png
+  # assets:
+     #- assets/images/android.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
