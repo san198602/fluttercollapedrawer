@@ -37,6 +37,17 @@ class _MyHomePageState extends State<MyHomePage> {
     appBar: AppBar(
       backgroundColor: Color.fromRGBO(120, 10, 10, 0.9),
       elevation: 0,
+      leading: Builder(
+        builder: (BuildContext context) {
+          return IconButton(
+            icon: const Icon(Icons.arrow_back_ios_new_rounded),
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
+            tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+          );
+        },
+      ),
       title: Text(
         MyApp.title,
         style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
