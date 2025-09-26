@@ -3,6 +3,8 @@ import 'package:fluttercollapedrawer/NavDrawer.dart';
 import 'package:fluttercollapedrawer/NavigationProvider.dart';
 import 'package:provider/provider.dart';
 
+import 'package:flutter_svg/flutter_svg.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -44,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: () {
               Scaffold.of(context).openDrawer();
             },
-            tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+            tooltip: "Click Here to Open the door!!",
           );
         },
       ),
@@ -55,6 +57,13 @@ class _MyHomePageState extends State<MyHomePage> {
       iconTheme: IconThemeData(color: Colors.white),
       centerTitle: true,
     ),
-    body: SafeArea(child: Text("Content!!!!")),
+    body: Center(
+      child: SvgPicture.asset(
+        'assets/svgs/list-menu-svgrepo-com.svg',
+        semanticsLabel: 'My SVG Image',
+        height: 100,
+        width: 70,
+      ),
+    ),
   );
 }
