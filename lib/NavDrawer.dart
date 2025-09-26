@@ -5,6 +5,7 @@ import 'package:fluttercollapedrawer/NavigationProvider.dart';
 import 'package:fluttercollapedrawer/data/DrawerData.dart';
 import 'package:fluttercollapedrawer/model/DrawerModel.dart';
 import 'package:fluttercollapedrawer/screens/home.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
 class NavDrawer extends StatelessWidget {
@@ -148,9 +149,14 @@ class NavDrawer extends StatelessWidget {
     Navigator.of(context).pop();
     switch (index) {
       case 0:
-        Navigator.of(
+        Navigator.push(
           context,
-        ).push(MaterialPageRoute(builder: (context) => HomePage()));
+          PageTransition(
+            type: PageTransitionType.rightToLeft,
+            child: HomePage(),
+          ),
+        );
+
         break;
     }
   }
