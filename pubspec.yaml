@@ -39,6 +39,7 @@ flutter:
 
   assets:
      - assets/images/android.png
+     - assets/svgs/list-menu-svgrepo-com.svg
   # fonts:
   #   - family: Schyler
   #     fonts:
