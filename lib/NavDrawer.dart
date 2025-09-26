@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttercollapedrawer/NavigationProvider.dart';
 import 'package:fluttercollapedrawer/data/DrawerData.dart';
 import 'package:fluttercollapedrawer/model/DrawerModel.dart';
+import 'package:fluttercollapedrawer/screens/home.dart';
 import 'package:provider/provider.dart';
 
 class NavDrawer extends StatelessWidget {
@@ -33,7 +34,11 @@ class NavDrawer extends StatelessWidget {
                 child: buildHeader(isCollpsed),
               ),
               const SizedBox(height: 20),
-              BuildList(items: itemFirst, isCollpsed: isCollpsed),
+              BuildList(items: firstItems, isCollpsed: isCollpsed),
+              const SizedBox(height: 24),
+              Divider(color: Colors.white),
+              const SizedBox(height: 24),
+              BuildList(items: secondItems, isCollpsed: isCollpsed),
               Spacer(),
               buildCollapseIcon(context, isCollpsed),
               const SizedBox(height: 20),
@@ -100,19 +105,19 @@ class NavDrawer extends StatelessWidget {
     required List<DrawerModel> items,
     required bool isCollpsed,
   }) => ListView.separated(
-    padding: padding,
+    padding: isCollpsed ? EdgeInsets.zero : padding,
     shrinkWrap: true,
     primary: false,
     itemCount: items.length,
     separatorBuilder: (contex, index) => SizedBox(height: 10),
-    itemBuilder: (contex, index) {
+    itemBuilder: (context, index) {
       final item = items[index];
 
       return buildMenuItem(
         isCollpsed: isCollpsed,
         text: item.title,
         icon: item.icon,
-        onClicked: () {},
+        onClicked: () => SelectItem(context, index),
       );
     },
   );
@@ -136,5 +141,17 @@ class NavDrawer extends StatelessWidget {
               onTap: onClicked,
             ),
     );
+  }
+
+  // ignore: non_constant_identifier_names
+  void SelectItem(BuildContext context, int index) {
+    Navigator.of(context).pop();
+    switch (index) {
+      case 0:
+        Navigator.of(
+          context,
+        ).push(MaterialPageRoute(builder: (context) => HomePage()));
+        break;
+    }
   }
 }

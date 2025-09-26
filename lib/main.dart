@@ -33,7 +33,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) => Scaffold(
     extendBodyBehindAppBar: true,
-
     drawer: NavDrawer(),
     appBar: AppBar(
       backgroundColor: Color.fromRGBO(120, 10, 10, 0.9),
