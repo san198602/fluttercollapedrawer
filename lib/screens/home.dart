@@ -16,9 +16,9 @@ class HomePage extends StatelessWidget {
       ),
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(5.0),
           child: AspectRatio(
-            aspectRatio: 1.70, // Adjust aspect ratio as needed
+            aspectRatio: 0.90, // Adjust aspect ratio as needed
             child: MyLineChart(),
           ),
         ),
