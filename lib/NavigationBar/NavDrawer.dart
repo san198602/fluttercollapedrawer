@@ -1,7 +1,8 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:fluttercollapedrawer/NavigationProvider.dart';
+import 'package:fluttercollapedrawer/NavigationBar/NavigationProvider.dart';
+
 import 'package:fluttercollapedrawer/data/DrawerData.dart';
 import 'package:fluttercollapedrawer/model/DrawerModel.dart';
 import 'package:fluttercollapedrawer/screens/home.dart';
@@ -69,21 +70,19 @@ class NavDrawer extends StatelessWidget {
         );
 
   Widget buildCollapseIcon(BuildContext context, bool isCollpsed) {
-    // ignore: unused_local_variable
     final double size = 60;
-    // ignore: unused_local_variable
+
     final icon = isCollpsed ? Icons.arrow_forward_ios : Icons.arrow_back_ios;
     final alignment = isCollpsed ? Alignment.center : Alignment.topRight;
     final margin = EdgeInsets.only(right: 10);
     final width = isCollpsed ? double.infinity : size;
-    // ignore: avoid_unnecessary_containers
+
     return Container(
       alignment: alignment,
       margin: margin,
       child: Material(
         color: Colors.transparent,
         child: InkWell(
-          // ignore: sized_box_for_whitespace
           child: Container(
             width: width,
             height: size,

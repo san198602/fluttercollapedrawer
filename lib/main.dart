@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fluttercollapedrawer/NavDrawer.dart';
-import 'package:fluttercollapedrawer/NavigationProvider.dart';
+import 'package:fluttercollapedrawer/NavigationBar/NavDrawer.dart';
+
+import 'package:fluttercollapedrawer/NavigationBar/NavigationProvider.dart';
+
 import 'package:provider/provider.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
