@@ -55,6 +55,9 @@ dev_dependencies:
 flutter_native_splash:
   image: assets/images/android.png
   color: "#2A52BE"
+  android: true
+  ios: true
+  
 flutter:
 
   # The following line ensures that the Material Icons font is
