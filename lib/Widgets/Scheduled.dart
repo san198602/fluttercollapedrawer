@@ -55,7 +55,7 @@ class Scheduled extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SvgPicture.asset('assets/svg/more.svg'),
+                      SvgPicture.asset('assets/svgs/more.svg'),
                     ],
                   ),
                 ],
