@@ -12,5 +12,9 @@ const tOnBoardingPage1Color = Color(0X00ffffff);
 const tOnBoardingPage2Color = Color(0X00ffffff);
 const tOnBoardingPage3Color = Color(0X00ffffff);
 
+const primaryColorCode = 0xFFA9DFD8;
+const cardBackgroundColor = Color(0xFF21222D);
+
+
 const String tWelcomeScreen = "assets/images/welcome.jpg";
 const String tWelcomeScreen1 = "assets/images/back0.jpg";

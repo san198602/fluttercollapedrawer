@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttercollapedrawer/NavigationBar/NavigationProvider.dart';
 import 'package:fluttercollapedrawer/data/DrawerData.dart';
 import 'package:fluttercollapedrawer/model/DrawerModel.dart';
+import 'package:fluttercollapedrawer/screens/Profile.dart';
 import 'package:fluttercollapedrawer/screens/home.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
@@ -18,22 +19,22 @@ class NavDrawer extends StatelessWidget {
     final safearea = EdgeInsets.only(
       top: MediaQuery.of(context).viewPadding.top,
     );
-    // ignore: sized_box_for_whitespace
+
     return Container(
       // ignore: dead_code
       width: isCollpsed ? MediaQuery.of(context).size.width * 0.2 : null,
 
       child: Drawer(
         child: Container(
-          color: Color(0xFF1a2f45),
+          //color: Color(0xFF1a2f45),
+          color: Color.fromARGB(255, 92, 9, 7),
 
           child: Column(
             children: [
               Container(
                 padding: EdgeInsets.symmetric(vertical: 24).add(safearea),
-
                 width: double.infinity,
-                color: Colors.white12,
+                color: Color.fromRGBO(255, 255, 255, 0.1),
                 child: buildHeader(isCollpsed),
               ),
               const SizedBox(height: 20),
@@ -101,7 +102,6 @@ class NavDrawer extends StatelessWidget {
     );
   }
 
-  // ignore: non_constant_identifier_names
   Widget BuildList({
     required List<DrawerModel> items,
     required bool isCollpsed,
@@ -153,10 +153,18 @@ class NavDrawer extends StatelessWidget {
           context,
           PageTransition(
             type: PageTransitionType.rightToLeft,
+            child: Profile(),
+          ),
+        );
+        break;
+      case 1:
+        Navigator.push(
+          context,
+          PageTransition(
+            type: PageTransitionType.rightToLeft,
             child: HomePage(),
           ),
         );
-
         break;
     }
   }

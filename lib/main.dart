@@ -5,7 +5,7 @@ import 'package:fluttercollapedrawer/NavigationBar/NavigationProvider.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:provider/provider.dart';
-import 'package:fluttercollapedrawer/Constants/const.dart';
+import 'package:fluttercollapedrawer/Constants/constants.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -38,7 +38,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) => Scaffold(
     extendBodyBehindAppBar: true,
     drawer: NavDrawer(),
-
     appBar: AppBar(
       backgroundColor: Color.fromRGBO(120, 10, 10, 0.9),
       elevation: 0,
@@ -58,19 +57,44 @@ class _MyHomePageState extends State<MyHomePage> {
         MyApp.title,
         style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
       ),
-      iconTheme: IconThemeData(color: Colors.white),
-      centerTitle: true,
     ),
-    body: SafeArea(
-      child: Column(
-        children: [
-          Center(
+    body: Container(
+      padding: EdgeInsets.only(top: 100, bottom: 0, left: 5, right: 5),
+      decoration: BoxDecoration(color: const Color.fromRGBO(255, 0, 0, 0.9)),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Flexible(
+            flex: 1,
             child: SvgPicture.asset(
               'assets/svgs/elearning.svg',
-              height: 350,
-              width: 500,
+              height: 80,
+              width: 50,
             ),
-            
+          ),
+          Flexible(
+            flex: 1,
+            child: SvgPicture.asset(
+              'assets/svgs/setting.svg',
+              height: 80,
+              width: 80,
+            ),
+          ),
+          Flexible(
+            flex: 1,
+            child: SvgPicture.asset(
+              'assets/svgs/burn.svg',
+              height: 80,
+              width: 80,
+            ),
+          ),
+          Flexible(
+            flex: 1,
+            child: SvgPicture.asset(
+              'assets/svgs/distance.svg',
+              height: 80,
+              width: 80,
+            ),
           ),
         ],
       ),
