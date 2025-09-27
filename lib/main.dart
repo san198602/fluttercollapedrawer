@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttercollapedrawer/NavigationBar/NavDrawer.dart';
 
 import 'package:fluttercollapedrawer/NavigationBar/NavigationProvider.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'package:provider/provider.dart';
 import 'package:fluttercollapedrawer/Constants/const.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
     create: (context) => Navigationprovider(),
     child: MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: 'IBMPlexSans'),
+      theme: ThemeData(fontFamily: GoogleFonts.lato().fontFamily),
       home: MyHomePage(),
     ),
   );
@@ -60,12 +61,18 @@ class _MyHomePageState extends State<MyHomePage> {
       iconTheme: IconThemeData(color: Colors.white),
       centerTitle: true,
     ),
-    body: Center(
-      child: SvgPicture.asset(
-        'assets/svgs/list-menu-svgrepo-com.svg',
-        semanticsLabel: 'My SVG Image',
-        height: 100,
-        width: 70,
+    body: SafeArea(
+      child: Column(
+        children: [
+          Center(
+            child: SvgPicture.asset(
+              'assets/svgs/elearning.svg',
+              height: 350,
+              width: 500,
+            ),
+            
+          ),
+        ],
       ),
     ),
   );
