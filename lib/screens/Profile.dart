@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttercollapedrawer/Constants/colors.dart';
 import 'package:fluttercollapedrawer/Responsive/Responsive.dart';
+import 'package:fluttercollapedrawer/Widgets/WeightHeightBloodCard.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
@@ -40,7 +41,7 @@ class Profile extends StatelessWidget {
                 padding: EdgeInsets.all(
                   Responsive.isMobile(context) ? 15 : 20.0,
                 ),
-                // child: const WeightHeightBloodCard(),
+                child: const WeightHeightBloodCard(),
               ),
               SizedBox(height: Responsive.isMobile(context) ? 20 : 40),
               // Scheduled()
