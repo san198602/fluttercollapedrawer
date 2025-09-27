@@ -22,13 +22,16 @@ class NavDrawer extends StatelessWidget {
     return Container(
       // ignore: dead_code
       width: isCollpsed ? MediaQuery.of(context).size.width * 0.2 : null,
+
       child: Drawer(
         child: Container(
           color: Color(0xFF1a2f45),
+
           child: Column(
             children: [
               Container(
                 padding: EdgeInsets.symmetric(vertical: 24).add(safearea),
+
                 width: double.infinity,
                 color: Colors.white12,
                 child: buildHeader(isCollpsed),

@@ -18,7 +18,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) => ChangeNotifierProvider(
     create: (context) => Navigationprovider(),
-    child: MaterialApp(debugShowCheckedModeBanner: false, home: MyHomePage()),
+    child: MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(fontFamily: 'IBMPlexSans'),
+      home: MyHomePage(),
+    ),
   );
 }
 

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttercollapedrawer/model/DrawerModel.dart';
 
 final firstItems = [
+  DrawerModel(title: "User Profile", icon: Icons.person_off_outlined),
   DrawerModel(title: "Get Started", icon: Icons.people),
   DrawerModel(title: "Samples & Tutorials", icon: Icons.phone_android),
   DrawerModel(title: "Testing & Debugging", icon: Icons.settings_applications),
